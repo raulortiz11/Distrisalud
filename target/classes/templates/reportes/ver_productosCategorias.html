@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="master">
+<body>
+<main layout:fragment="contenido">
+    <div class="col-12">
+        <h2>Reporte de cantidad de productos por categoria</h2>
+        <div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)" th:if="${mensaje != null}"
+             th:text="${mensaje}"
+             class="alert">
+        </div>  
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Id Categoria</th>                  
+                    <th>Nombre</th>       
+                    <th>Cantidad</th>  
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="categoriaProducto : ${categoriasProductos}">
+                    <td th:text="${categoriaProducto.categoria_producto_id}"></td>                 
+                    <td th:text="${categoriaProducto.nombre}"></td>
+                     <td th:text="${categoriaProducto.cant}"></td> 
+                 
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>
