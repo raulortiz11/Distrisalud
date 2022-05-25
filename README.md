@@ -13,9 +13,8 @@ Se puede encontrar el script de base de datos en /src/main/resources/scriptBaseD
 
 Tener instalado Mysql 
 
-Crear la base de datos distrisalud y asignarle un usuario, y este debe modificarse en los datos de conexión de application,properties
+Crear la base de datos distrisalud y asignarle un usuario dandole los permisos necesarios y este debe modificarse en los datos de conexión de application,properties
 
-El script e la base de datos se puede localizar en el siguiente path 
 
 ## Compilar el aplicativo
 
@@ -41,6 +40,5 @@ Los datos de usuario para acceder al aplicativo,
 
 Acualmente solo se ha ingresado un usuario
 
-username: raul
-password: 123456 
+username: raul | password: 123456 
 
